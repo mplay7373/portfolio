@@ -219,7 +219,6 @@
                     <h2 class="font-serif text-4xl md:text-5xl text-white font-light">Портфолио</h2>
                 </div>
                 
-                <!-- Чистые и понятные папки без кнопки "Все" -->
                 <div class="flex space-x-2 border-b border-white/5 pb-2 text-xs tracking-[0.2em] uppercase font-light">
                     <button id="btn-photo" onclick="filterGallery('photo')" class="filter-btn text-gold border-b-2 border-gold pb-2 px-4 transition font-medium">Фото</button>
                     <button id="btn-video" onclick="filterGallery('video')" class="filter-btn text-gray-400 hover:text-white pb-2 px-4 transition">Video / Reels</button>
@@ -301,9 +300,10 @@
                 </div>
             </div>
             
+            <!-- Заменили кнопку Telegram на Instagram -->
             <div class="text-center mt-12">
-                <a href="https://t.me/Maratfoto73" target="_blank" class="inline-block border border-gold/40 text-gold hover:bg-gold hover:text-dark-pitch text-xs tracking-widest uppercase font-semibold py-4 px-8 transition duration-300">
-                    Смотреть больше работ в Telegram <i class="fa-brands fa-telegram ml-2"></i>
+                <a href="https://www.instagram.com/maratfoto.ru/" target="_blank" class="inline-block border border-gold/40 text-gold hover:bg-gold hover:text-dark-pitch text-xs tracking-widest uppercase font-semibold py-4 px-8 transition duration-300">
+                    Смотреть больше работ в Instagram <i class="fa-brands fa-instagram ml-2"></i>
                 </a>
             </div>
         </div>
@@ -496,20 +496,17 @@
             const items = document.querySelectorAll('.gallery-item');
             const buttons = document.querySelectorAll('.filter-btn');
             
-            // Сбрасываем стили у всех кнопок
             buttons.forEach(btn => {
                 btn.classList.remove('text-gold', 'border-b-2', 'border-gold', 'font-medium');
                 btn.classList.add('text-gray-400');
             });
             
-            // Подсвечиваем активную кнопку
             const activeBtn = document.getElementById('btn-' + category);
             if (activeBtn) {
                 activeBtn.classList.remove('text-gray-400');
                 activeBtn.classList.add('text-gold', 'border-b-2', 'border-gold', 'font-medium');
             }
 
-            // Переключение вкладок "Фото" / "Видео"
             items.forEach((item) => {
                 if (category === 'photo') {
                     item.style.display = item.classList.contains('photo') ? 'block' : 'none';
@@ -519,7 +516,6 @@
             });
         }
 
-        // Запуск фильтрации по умолчанию (сразу открываем папку Фото)
         document.addEventListener('DOMContentLoaded', () => {
             filterGallery('photo');
         });
