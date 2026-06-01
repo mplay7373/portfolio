@@ -199,7 +199,7 @@
                 </ul>
             </div>
 
-            <!-- Твоя идеальная обработанная фотография камеры -->
+            <!-- Фотография твоей камеры Canon R8 -->
             <div class="w-full lg:w-[420px] aspect-[2/1] sm:aspect-[16/9] lg:aspect-[4/3] bg-dark-slate border border-white/10 rounded overflow-hidden relative shadow-2xl group">
                 <img src="Unbox-EOS-R8-2_2.jpg" alt="Canon EOS R8" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
                 <div class="absolute inset-0 bg-gradient-to-t from-dark-pitch/40 to-transparent"></div>
@@ -227,20 +227,40 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Место под фото №1 -->
-                <div class="gallery-item photo group cursor-pointer" onclick="openLightbox('photo1.jpg', 'Кинематографичный портрет')">
+                <!-- Фото №1 — Лес профиль -->
+                <div class="gallery-item photo group cursor-pointer" onclick="openLightbox('photo1.jpg', 'Атмосферный лесной портрет')">
                     <div class="relative aspect-[3/4] overflow-hidden border border-white/5 bg-dark-pitch">
-                        <img src="photo1.jpg" alt="Портфолио 1" class="w-full h-full object-cover cinematic-filter transition duration-700 group-hover:scale-105" onerror="this.parentElement.parentElement.style.display='none'">
+                        <img src="photo1.jpg" alt="Портфолио 1" class="w-full h-full object-cover cinematic-filter transition duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-dark-pitch/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                             <span class="border border-gold text-gold text-xs tracking-widest uppercase py-2 px-4 bg-dark-pitch/80">Посмотреть</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Место под фото №2 -->
-                <div class="gallery-item photo group cursor-pointer" onclick="openLightbox('photo2.jpg', 'Атмосферный кадр')">
+                <!-- Фото №2 — Желтые очки стрит -->
+                <div class="gallery-item photo group cursor-pointer" onclick="openLightbox('photo2.jpg', 'Городской кинематографичный стиль')">
                     <div class="relative aspect-[3/4] overflow-hidden border border-white/5 bg-dark-pitch">
-                        <img src="photo2.jpg" alt="Портфолио 2" class="w-full h-full object-cover cinematic-filter transition duration-700 group-hover:scale-105" onerror="this.parentElement.parentElement.style.display='none'">
+                        <img src="photo2.jpg" alt="Портфолио 2" class="w-full h-full object-cover cinematic-filter transition duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-dark-pitch/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <span class="border border-gold text-gold text-xs tracking-widest uppercase py-2 px-4 bg-dark-pitch/80">Посмотреть</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Фото №3 — Крупный план у дерева -->
+                <div class="gallery-item photo group cursor-pointer" onclick="openLightbox('photo3.jpg', 'Художественный портрет')">
+                    <div class="relative aspect-[3/4] overflow-hidden border border-white/5 bg-dark-pitch">
+                        <img src="photo3.jpg" alt="Портфолио 3" class="w-full h-full object-cover cinematic-filter transition duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-dark-pitch/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <span class="border border-gold text-gold text-xs tracking-widest uppercase py-2 px-4 bg-dark-pitch/80">Посмотреть</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Фото №4 — Закрытые глаза профиль -->
+                <div class="gallery-item photo group cursor-pointer" onclick="openLightbox('photo4.jpg', 'Глубокие полутона')">
+                    <div class="relative aspect-[3/4] overflow-hidden border border-white/5 bg-dark-pitch">
+                        <img src="photo4.jpg" alt="Портфолио 4" class="w-full h-full object-cover cinematic-filter transition duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-dark-pitch/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                             <span class="border border-gold text-gold text-xs tracking-widest uppercase py-2 px-4 bg-dark-pitch/80">Посмотреть</span>
                         </div>
@@ -261,6 +281,7 @@
                     </div>
                 </div>
 
+                <!-- Видеоклип -->
                 <div class="gallery-item video group cursor-pointer" onclick="openVideoModal('Кинематографичная проходка')">
                     <div class="relative aspect-[3/4] overflow-hidden border border-white/5 bg-dark-pitch">
                         <div class="absolute inset-0 flex items-center justify-center bg-zinc-900 group-hover:bg-zinc-800 transition duration-500">
@@ -428,10 +449,6 @@
                 </form>
             </div>
         </div>
-    </section>
-
-    <section id="about" class="fade-in-section bg-dark-slate py-24 border-y border-white/5" style="display: none;">
-        <!-- Дублирующий скрытый блок для сохранения исходного контента -->
     </section>
 
     <footer class="bg-dark-pitch border-t border-white/5 py-12 px-6 md:px-12">
