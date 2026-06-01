@@ -199,7 +199,7 @@
                 </ul>
             </div>
 
-            <!-- Фотография твоей камеры Canon R8 -->
+            <!-- Твоя идеальная обработанная фотография камеры -->
             <div class="w-full lg:w-[420px] aspect-[2/1] sm:aspect-[16/9] lg:aspect-[4/3] bg-dark-slate border border-white/10 rounded overflow-hidden relative shadow-2xl group">
                 <img src="Unbox-EOS-R8-2_2.jpg" alt="Canon EOS R8" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
                 <div class="absolute inset-0 bg-gradient-to-t from-dark-pitch/40 to-transparent"></div>
@@ -220,13 +220,13 @@
                 </div>
                 
                 <div class="flex space-x-2 border-b border-white/5 pb-2 text-xs tracking-[0.2em] uppercase font-light">
-                    <button onclick="filterGallery('all')" class="filter-btn text-gold border-b-2 border-gold pb-2 px-4 transition">Все</button>
-                    <button onclick="filterGallery('photo')" class="filter-btn text-gray-400 hover:text-white pb-2 px-4 transition">Фото</button>
-                    <button onclick="filterGallery('video')" class="filter-btn text-gray-400 hover:text-white pb-2 px-4 transition">Video / Reels</button>
+                    <button id="btn-all" onclick="filterGallery('all')" class="filter-btn text-gold border-b-2 border-gold pb-2 px-4 transition font-medium">Все</button>
+                    <button id="btn-photo" onclick="filterGallery('photo')" class="filter-btn text-gray-400 hover:text-white pb-2 px-4 transition">Фото</button>
+                    <button id="btn-video" onclick="filterGallery('video')" class="filter-btn text-gray-400 hover:text-white pb-2 px-4 transition">Video / Reels</button>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
                 <!-- Фото №1 — Лес профиль -->
                 <div class="gallery-item photo group cursor-pointer" onclick="openLightbox('photo1.jpg', 'Атмосферный лесной портрет')">
                     <div class="relative aspect-[3/4] overflow-hidden border border-white/5 bg-dark-pitch">
@@ -494,11 +494,46 @@
 
         function filterGallery(category) {
             const items = document.querySelectorAll('.gallery-item');
-            items.forEach(item => {
-                if (category === 'all') { item.style.display = 'block'; } 
-                else { item.style.display = item.classList.contains(category) ? 'block' : 'none'; }
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Сбрасываем стили у всех кнопок
+            buttons.forEach(btn => {
+                btn.classList.remove('text-gold', 'border-b-2', 'border-gold', 'font-medium');
+                btn.classList.add('text-gray-400');
+            });
+            
+            // Подсвечиваем активную кнопку
+            const activeBtn = document.getElementById('btn-' + category);
+            if (activeBtn) {
+                activeBtn.classList.remove('text-gray-400');
+                activeBtn.classList.add('text-gold', 'border-b-2', 'border-gold', 'font-medium');
+            }
+
+            // Умный показ элементов
+            items.forEach((item, index) => {
+                if (category === 'all') {
+                    // Для режима "Все" показываем сбалансированное превью (первые 3 фото и 1 видео)
+                    if (item.classList.contains('photo') && index < 3) {
+                        item.style.display = 'block';
+                    } else if (item.classList.contains('video')) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                } else if (category === 'photo') {
+                    // Показываем ВСЕ доступные фотографии без ограничений
+                    item.style.display = item.classList.contains('photo') ? 'block' : 'none';
+                } else if (category === 'video') {
+                    // Показываем только видеоклипы
+                    item.style.display = item.classList.contains('video') ? 'block' : 'none';
+                }
             });
         }
+
+        // Запуск фильтрации по умолчанию при загрузке
+        document.addEventListener('DOMContentLoaded', () => {
+            filterGallery('all');
+        });
 
         function openLightbox(src, title) {
             document.getElementById('lightbox-img').src = src;
