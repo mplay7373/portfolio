@@ -219,9 +219,9 @@
                     <h2 class="font-serif text-4xl md:text-5xl text-white font-light">Портфолио</h2>
                 </div>
                 
+                <!-- Чистые и понятные папки без кнопки "Все" -->
                 <div class="flex space-x-2 border-b border-white/5 pb-2 text-xs tracking-[0.2em] uppercase font-light">
-                    <button id="btn-all" onclick="filterGallery('all')" class="filter-btn text-gold border-b-2 border-gold pb-2 px-4 transition font-medium">Все</button>
-                    <button id="btn-photo" onclick="filterGallery('photo')" class="filter-btn text-gray-400 hover:text-white pb-2 px-4 transition">Фото</button>
+                    <button id="btn-photo" onclick="filterGallery('photo')" class="filter-btn text-gold border-b-2 border-gold pb-2 px-4 transition font-medium">Фото</button>
                     <button id="btn-video" onclick="filterGallery('video')" class="filter-btn text-gray-400 hover:text-white pb-2 px-4 transition">Video / Reels</button>
                 </div>
             </div>
@@ -509,30 +509,19 @@
                 activeBtn.classList.add('text-gold', 'border-b-2', 'border-gold', 'font-medium');
             }
 
-            // Умный показ элементов
-            items.forEach((item, index) => {
-                if (category === 'all') {
-                    // Для режима "Все" показываем сбалансированное превью (первые 3 фото и 1 видео)
-                    if (item.classList.contains('photo') && index < 3) {
-                        item.style.display = 'block';
-                    } else if (item.classList.contains('video')) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                } else if (category === 'photo') {
-                    // Показываем ВСЕ доступные фотографии без ограничений
+            // Переключение вкладок "Фото" / "Видео"
+            items.forEach((item) => {
+                if (category === 'photo') {
                     item.style.display = item.classList.contains('photo') ? 'block' : 'none';
                 } else if (category === 'video') {
-                    // Показываем только видеоклипы
                     item.style.display = item.classList.contains('video') ? 'block' : 'none';
                 }
             });
         }
 
-        // Запуск фильтрации по умолчанию при загрузке
+        // Запуск фильтрации по умолчанию (сразу открываем папку Фото)
         document.addEventListener('DOMContentLoaded', () => {
-            filterGallery('all');
+            filterGallery('photo');
         });
 
         function openLightbox(src, title) {
