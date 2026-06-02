@@ -118,7 +118,7 @@
         </div>
     </header>
 
-    <!-- Главный экран: Фотография Марата с фотоаппаратом -->
+    <!-- Главный экран: main_profile.png (Ты с фотоаппаратом) -->
     <section class="min-h-screen pt-28 pb-16 px-6 md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12" style="min-height: 100vh;">
         <div class="flex-1 space-y-6 md:pr-8">
             <div class="flex items-center space-x-3 text-gold tracking-[0.3em] text-xs uppercase font-semibold">
@@ -145,7 +145,7 @@
             <div class="relative group">
                 <div class="absolute -inset-2 border border-gold/30 translate-x-2 translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0 transition duration-500"></div>
                 <div class="relative w-[320px] h-[460px] md:w-[380px] md:h-[540px] overflow-hidden border border-white/10 bg-dark-slate shadow-2xl">
-                    <img src="main_profile.png" alt="Марат Гайнутдинов с фотоаппаратом" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    <img src="main_profile.png" alt="Марат Гайнутдинов" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
                 </div>
                 <div class="absolute bottom-4 left-4 bg-dark-pitch/80 backdrop-blur-md border border-white/5 px-4 py-2 text-[10px] tracking-widest uppercase text-gold">
                     <i class="fa-solid fa-camera-retro mr-2"></i> Canon EOS R8
@@ -154,12 +154,12 @@
         </div>
     </section>
 
-    <!-- Раздел философии: Замена фотографии на бокалы -->
+    <!-- Философия автора: Установлен твой реальный файл cinema.jpeg -->
     <section id="about" class="fade-in-section bg-dark-slate py-24 border-y border-white/5">
         <div class="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-12 gap-12 items-center">
             <div class="md:col-span-5 flex justify-center order-2 md:order-1">
                 <div class="relative w-[280px] h-[380px] overflow-hidden border border-white/5 rounded-sm shadow-xl">
-                    <img src="bokaly.jpg" alt="Атмосферный кадр с бокалами" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+                    <img src="cinema.jpeg" alt="Искусство видеть настоящее" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
                 </div>
             </div>
 
@@ -173,13 +173,13 @@
                     Привет! Меня зовут Марат. Моя страсть — создание чистой, эстетичной картинки с характером. Я сторонник свежего, амбициозного взгляда на съемку. Не люблю заезженные шаблоны и искусственную, натянутую пластмассовую позировку. 
                 </p>
                 <p class="text-gray-400 text-sm leading-relaxed font-light">
-                    Специализируюсь исключительно на художественных портретах и атмосферных видео-проходках. Моя задача — поймать тот самый кадр, в котором чувствуется глубина, style и неподдельные эмоции. Работа на топовый полный кадр Canon R8 позволяет мне выдавать стабильно дорогую, объемную кино-картинку в любых условиях.
+                    Специализируюсь исключительно на художественных портретах и атмосферных видео-проходках. Моя задача — поймать тот самый кадр, в котором чувствуется глубина, стиль и неподдельные эмоции. Работа на топовый полный кадр Canon R8 позволяет мне выдавать стабильно дорогую, объемную кино-картинку в любых условиях.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Блок оборудования: Реальная фотография Canon EOS R8 -->
+    <!-- Оборудование: Установлен твой реальный файл Unbox-EOS-R8-2_2.jpg -->
     <section id="gear" class="fade-in-section py-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center space-y-4 mb-16">
             <span class="text-gold tracking-[0.3em] text-xs uppercase block">Качество без компромиссов</span>
@@ -206,12 +206,12 @@
             </div>
 
             <div class="w-full lg:w-1/3 aspect-video overflow-hidden border border-white/10 rounded bg-dark-slate shadow-inner group">
-                <img src="canon_r8.jpg" alt="Камера Canon EOS R8" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                <img src="Unbox-EOS-R8-2_2.jpg" alt="Камера Canon EOS R8" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
             </div>
         </div>
     </section>
 
-    <!-- Портфолио: Твои реальные рабочие файлы изображений -->
+    <!-- Портфолио: Все 4 фотографии теперь отображаются корректно -->
     <section id="portfolio" class="fade-in-section py-24 bg-dark-slate border-t border-white/5">
         <div class="max-w-7xl mx-auto px-6 md:px-12">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-16">
@@ -228,27 +228,27 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Реальное Фото №1 -->
-                <div class="gallery-item photo group cursor-pointer" onclick="openLightbox('IMG_7396.jpg', 'Кинематографичный портрет')">
+                <!-- Кадр 1 -->
+                <div class="gallery-item photo group cursor-pointer" onclick="openLightbox('photo1.jpg', 'Кинематографичный портрет')">
                     <div class="relative aspect-[3/4] overflow-hidden border border-white/5 bg-dark-pitch">
-                        <img src="IMG_7396.jpg" alt="Портфолио 1" class="w-full h-full object-cover cinematic-filter transition duration-700 group-hover:scale-105">
+                        <img src="photo1.jpg" alt="Портфолио 1" class="w-full h-full object-cover cinematic-filter transition duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-dark-pitch/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                             <span class="border border-gold text-gold text-xs tracking-widest uppercase py-2 px-4 bg-dark-pitch/80">Посмотреть</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Реальное Фото №2 -->
-                <div class="gallery-item photo group cursor-pointer" onclick="openLightbox('IMG_7417.jpg', 'Атмосферный кадр')">
+                <!-- Кадр 2 -->
+                <div class="gallery-item photo group cursor-pointer" onclick="openLightbox('photo2.jpg', 'Атмосферный кадр')">
                     <div class="relative aspect-[3/4] overflow-hidden border border-white/5 bg-dark-pitch">
-                        <img src="IMG_7417.jpg" alt="Портфолио 2" class="w-full h-full object-cover cinematic-filter transition duration-700 group-hover:scale-105">
+                        <img src="photo2.jpg" alt="Портфолио 2" class="w-full h-full object-cover cinematic-filter transition duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-dark-pitch/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                             <span class="border border-gold text-gold text-xs tracking-widest uppercase py-2 px-4 bg-dark-pitch/80">Посмотреть</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Девушка крупным планом -->
+                <!-- Кадр 3 (Девушка макро) -->
                 <div class="gallery-item photo group cursor-pointer" onclick="openLightbox('IMG_7398.jpg', 'Кинематографичный макро-портрет')">
                     <div class="relative aspect-[3/4] overflow-hidden border border-white/5 bg-dark-pitch">
                         <img src="IMG_7398.jpg" alt="Макро-портрет" class="w-full h-full object-cover cinematic-filter transition duration-700 group-hover:scale-105">
@@ -262,6 +262,7 @@
                     </div>
                 </div>
 
+                <!-- Кадр 4 (Видео-заглушка) -->
                 <div class="gallery-item video group cursor-pointer" onclick="openVideoModal('Кинематографичная проходка')">
                     <div class="relative aspect-[3/4] overflow-hidden border border-white/5 bg-dark-pitch">
                         <div class="absolute inset-0 flex items-center justify-center bg-zinc-900 group-hover:bg-zinc-800 transition duration-500">
@@ -276,12 +277,11 @@
                     </div>
                     <div class="mt-4 flex justify-between items-center text-xs tracking-widest uppercase">
                         <span class="text-white font-light">Кино-проходка 4K</span>
-                        <span class="text-gold">Video</span>
+                        <span class="text-gold">Видеоклип</span>
                     </div>
                 </div>
             </div>
             
-            <!-- Изменено: Ссылка перенаправлена на Instagram -->
             <div class="text-center mt-12">
                 <a href="https://instagram.com/marat.gainutdinov" target="_blank" class="inline-block border border-gold/40 text-gold hover:bg-gold hover:text-dark-pitch text-xs tracking-widest uppercase font-semibold py-4 px-8 transition duration-300">
                     Смотреть больше работ в Instagram <i class="fa-brands fa-instagram ml-2"></i>
@@ -379,7 +379,7 @@
         </div>
     </section>
 
-    <!-- Контакты без лишних полей форм и мессенджера Max -->
+    <!-- Очищенные контакты: Ссылка ВКонтакте теперь кликабельна и ведет на твой профиль -->
     <section id="contacts" class="fade-in-section py-24 max-w-7xl mx-auto px-6 md:px-12">
         <div class="max-w-3xl mx-auto text-center space-y-8">
             <div class="space-y-4">
@@ -469,7 +469,6 @@
             document.getElementById('lightbox-caption').innerText = title;
             document.getElementById('lightbox').classList.replace('hidden', 'flex');
         }
-        function Flux_closeLightbox() { document.getElementById('lightbox').classList.replace('flex', 'hidden'); }
         function closeLightbox() { document.getElementById('lightbox').classList.replace('flex', 'hidden'); }
 
         let reviewsExpanded = false;
