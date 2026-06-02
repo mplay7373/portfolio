@@ -8,6 +8,7 @@
     <!-- Твой личный значок MG (Золото на чёрном) -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23080808%22/><text y=%2262%22 x=%2250%22 font-family=%22'Cormorant Garamond', serif%22 font-size=%2242%22 font-weight=%22bold%22 fill=%22%23c5a880%22 text-anchor=%22middle%22>MG</text></svg>">
     
+    <!-- Оптимизированный Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -118,6 +119,7 @@
         </div>
     </header>
 
+    <!-- Главный экран: Фотография Марата с фотоаппаратом (main_profile.png) -->
     <section class="min-h-screen pt-28 pb-16 px-6 md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12" style="min-height: 100vh;">
         <div class="flex-1 space-y-6 md:pr-8">
             <div class="flex items-center space-x-3 text-gold tracking-[0.3em] text-xs uppercase font-semibold">
@@ -144,7 +146,7 @@
             <div class="relative group">
                 <div class="absolute -inset-2 border border-gold/30 translate-x-2 translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0 transition duration-500"></div>
                 <div class="relative w-[320px] h-[460px] md:w-[380px] md:h-[540px] overflow-hidden border border-white/10 bg-dark-slate shadow-2xl">
-                    <img src="IMG_4323.jpg" alt="Марат Гайнутдинов" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                    <img src="main_profile.png" alt="Марат Гайнутдинов с фотоаппаратом" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
                 </div>
                 <div class="absolute bottom-4 left-4 bg-dark-pitch/80 backdrop-blur-md border border-white/5 px-4 py-2 text-[10px] tracking-widest uppercase text-gold">
                     <i class="fa-solid fa-camera-retro mr-2"></i> Canon EOS R8
@@ -153,11 +155,12 @@
         </div>
     </section>
 
+    <!-- Раздел философии: Замена фотографии портрета на бокалы (bokaly.jpg) -->
     <section id="about" class="fade-in-section bg-dark-slate py-24 border-y border-white/5">
         <div class="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-12 gap-12 items-center">
             <div class="md:col-span-5 flex justify-center order-2 md:order-1">
                 <div class="relative w-[280px] h-[380px] overflow-hidden border border-white/5 rounded-sm shadow-xl">
-                    <img src="IMG_4323.jpg" alt="Марат портрет" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+                    <img src="bokaly.jpg" alt="Атмосферный кадр с бокалами" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
                 </div>
             </div>
 
@@ -177,6 +180,7 @@
         </div>
     </section>
 
+    <!-- Блок оборудования: Добавлена реальная фотография Canon EOS R8 (canon_r8.jpg) -->
     <section id="gear" class="fade-in-section py-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center space-y-4 mb-16">
             <span class="text-gold tracking-[0.3em] text-xs uppercase block">Качество без компромиссов</span>
@@ -202,13 +206,8 @@
                 </ul>
             </div>
 
-            <div class="w-full lg:w-1/3 aspect-video bg-dark-slate border border-white/10 rounded flex flex-col justify-center items-center p-8 relative overflow-hidden group shadow-inner">
-                <div class="absolute -right-10 -bottom-10 text-[180px] text-white/5 font-serif font-bold pointer-events-none group-hover:scale-110 transition duration-700">R8</div>
-                <i class="fa-solid fa-compact-disc text-5xl text-gold mb-4 animate-spin-slow"></i>
-                <div class="text-center z-10">
-                    <span class="text-[10px] tracking-[0.3em] text-gray-500 uppercase block">Формат</span>
-                    <span class="font-serif text-xl text-white">Full-Frame Cinema Quality</span>
-                </div>
+            <div class="w-full lg:w-1/3 aspect-video overflow-hidden border border-white/10 rounded bg-dark-slate shadow-inner group">
+                <img src="canon_r8.jpg" alt="Камера Canon EOS R8" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
             </div>
         </div>
     </section>
@@ -229,7 +228,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Место под фото №1 — Твоя первая фотка на будущее (заготовка) -->
                 <div class="gallery-item photo group cursor-pointer" onclick="openLightbox('photo1.jpg', 'Кинематографичный портрет')">
                     <div class="relative aspect-[3/4] overflow-hidden border border-white/5 bg-dark-pitch">
                         <img src="photo1.jpg" alt="Портфолио 1" class="w-full h-full object-cover cinematic-filter transition duration-700 group-hover:scale-105" onerror="this.parentElement.parentElement.style.display='none'">
@@ -239,7 +237,6 @@
                     </div>
                 </div>
 
-                <!-- Место под фото №2 — Твоя вторая фотка на будущее (заготовка) -->
                 <div class="gallery-item photo group cursor-pointer" onclick="openLightbox('photo2.jpg', 'Атмосферный кадр')">
                     <div class="relative aspect-[3/4] overflow-hidden border border-white/5 bg-dark-pitch">
                         <img src="photo2.jpg" alt="Портфолио 2" class="w-full h-full object-cover cinematic-filter transition duration-700 group-hover:scale-105" onerror="this.parentElement.parentElement.style.display='none'">
@@ -249,7 +246,6 @@
                     </div>
                 </div>
 
-                <!-- Девушка, которую ты загрузил (Текущая живая фотка) -->
                 <div class="gallery-item photo group cursor-pointer" onclick="openLightbox('IMG_7398.jpg', 'Кинематографичный макро-портрет')">
                     <div class="relative aspect-[3/4] overflow-hidden border border-white/5 bg-dark-pitch">
                         <img src="IMG_7398.jpg" alt="Макро-портрет" class="w-full h-full object-cover cinematic-filter transition duration-700 group-hover:scale-105">
@@ -282,9 +278,8 @@
                 </div>
             </div>
             
-            <!-- Финальная кнопка-ссылка на твои соцсети -->
             <div class="text-center mt-12">
-                <a href="https://t.me/your_telegram_username" target="_blank" class="inline-block border border-gold/40 text-gold hover:bg-gold hover:text-dark-pitch text-xs tracking-widest uppercase font-semibold py-4 px-8 transition duration-300">
+                <a href="https://t.me/mplay73" target="_blank" class="inline-block border border-gold/40 text-gold hover:bg-gold hover:text-dark-pitch text-xs tracking-widest uppercase font-semibold py-4 px-8 transition duration-300">
                     Смотреть больше работ в Telegram <i class="fa-brands fa-telegram ml-2"></i>
                 </a>
             </div>
@@ -380,58 +375,38 @@
         </div>
     </section>
 
+    <!-- Очищенный блок контактов: Мгновенная прямая связь без форм и лишних мессенджеров -->
     <section id="contacts" class="fade-in-section py-24 max-w-7xl mx-auto px-6 md:px-12">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            <div class="lg:col-span-5 space-y-6">
+        <div class="max-w-3xl mx-auto text-center space-y-8">
+            <div class="space-y-4">
                 <span class="text-gold tracking-[0.3em] text-xs uppercase block font-semibold">Связь с режиссером</span>
-                <h2 class="font-serif text-4xl md:text-5xl text-white font-light">Начнем твою <br><span class="italic font-normal text-gold">историю</span>?</h2>
-                <p class="text-gray-400 text-sm leading-relaxed font-light">
-                    Если у тебя есть идея для эстетичного портрета, прогулочной съёмки или атмосферной видео-проходки — напиши мне в удобный мессенджер или соцсеть. Мы продумаем локацию и образы.
+                <h2 class="font-serif text-4xl md:text-5xl text-white font-light">Начнем твою <span class="italic font-normal text-gold">историю</span>?</h2>
+                <p class="text-gray-400 text-sm leading-relaxed font-light max-w-xl mx-auto">
+                    Если у тебя есть идея для эстетичного портрета, прогулочной съёмки или атмосферной видео-проходки — напиши мне напрямую в любой удобный мессенджер. Мы детально продумаем локацию и образы.
                 </p>
-                <div class="space-y-4 pt-4 text-xs tracking-widest uppercase font-light">
-                    <div class="flex items-center space-x-3">
-                        <span class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gold"><i class="fa-solid fa-phone text-xs"></i></span>
-                        <a href="tel:+79510993433" class="hover:text-gold text-white">+7 (951) 099-34-33</a>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <span class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gold"><i class="fa-solid fa-location-dot text-xs"></i></span>
-                        <span class="text-white">Ульяновск, Россия</span>
-                    </div>
-                </div>
             </div>
 
-            <div class="lg:col-span-7 bg-dark-card border border-white/5 p-8 rounded-lg space-y-6 shadow-2xl">
-                <h3 class="font-serif text-2xl text-white font-light">Мгновенная связь</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <a href="https://t.me/your_telegram_username" target="_blank" class="flex items-center justify-center space-x-3 bg-[#229ED9] hover:bg-[#1c81b3] text-white text-xs tracking-widest uppercase font-semibold py-4 px-6 rounded-sm transition">
-                        <i class="fa-brands fa-telegram text-base"></i><span>Telegram</span>
-                    </a>
-                    <a href="https://instagram.com/your_instagram_username" target="_blank" class="flex items-center justify-center space-x-3 bg-gradient-to-r from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white text-xs tracking-widest uppercase font-semibold py-4 px-6 rounded-sm transition">
-                        <i class="fa-brands fa-instagram text-base"></i><span>Instagram</span>
-                    </a>
-                    <a href="https://vk.com/your_vk_username" target="_blank" class="flex items-center justify-center space-x-3 bg-[#0077FF] hover:bg-[#0062d4] text-white text-xs tracking-widest uppercase font-semibold py-4 px-6 rounded-sm transition">
-                        <i class="fa-brands fa-vk text-base"></i><span>ВКонтакте</span>
-                    </a>
-                    <a href="https://max.messenger/your_id" target="_blank" class="flex items-center justify-center space-x-3 bg-[#3b5998] hover:bg-[#2d4373] text-white text-xs tracking-widest uppercase font-semibold py-4 px-6 rounded-sm transition">
-                        <i class="fa-solid fa-m text-base"></i><span>Messenger Max</span>
-                    </a>
-                </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+                <a href="https://t.me/mplay73" target="_blank" class="flex items-center justify-center space-x-3 bg-[#229ED9] hover:bg-[#1c81b3] text-white text-xs tracking-widest uppercase font-semibold py-4 px-6 rounded-sm transition">
+                    <i class="fa-brands fa-telegram text-base"></i><span>Telegram</span>
+                </a>
+                <a href="https://instagram.com/marat.gainutdinov" target="_blank" class="flex items-center justify-center space-x-3 bg-gradient-to-r from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white text-xs tracking-widest uppercase font-semibold py-4 px-6 rounded-sm transition">
+                    <i class="fa-brands fa-instagram text-base"></i><span>Instagram</span>
+                </a>
+                <a href="https://vk.com/mplay73" target="_blank" class="flex items-center justify-center space-x-3 bg-[#0077FF] hover:bg-[#0062d4] text-white text-xs tracking-widest uppercase font-semibold py-4 px-6 rounded-sm transition">
+                    <i class="fa-brands fa-vk text-base"></i><span>ВКонтакте</span>
+                </a>
+            </div>
 
-                <div class="relative flex py-2 items-center">
-                    <div class="flex-grow border-t border-white/5"></div>
-                    <span class="flex-shrink mx-4 text-[9px] text-gray-500 uppercase tracking-[0.2em]">или оставить заявку</span>
-                    <div class="flex-grow border-t border-white/5"></div>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6 pt-4 text-xs tracking-widest uppercase font-light text-gray-400">
+                <div class="flex items-center space-x-3">
+                    <span class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gold"><i class="fa-solid fa-phone text-xs"></i></span>
+                    <a href="tel:+79510993433" class="hover:text-gold text-white transition">+7 (951) 099-34-33</a>
                 </div>
-
-                <form onsubmit="handleSubmit(event)" class="space-y-4">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <input type="text" placeholder="Ваше Имя" required class="bg-dark-slate border border-white/5 focus:border-gold outline-none p-4 text-xs text-white rounded-sm w-full transition">
-                        <input type="tel" placeholder="Номер Телефона" required class="bg-dark-slate border border-white/5 focus:border-gold outline-none p-4 text-xs text-white rounded-sm w-full transition">
-                    </div>
-                    <textarea rows="3" placeholder="Опишите вашу идею..." class="bg-dark-slate border border-white/5 focus:border-gold outline-none p-4 text-xs text-white rounded-sm w-full transition"></textarea>
-                    <button type="submit" class="w-full bg-gold hover:bg-gold-dark text-dark-pitch text-xs tracking-[0.2em] uppercase font-bold py-4 transition rounded-sm">Отправить запрос</button>
-                    <p id="form-status" class="text-[10px] text-gold tracking-widest uppercase text-center h-4"></p>
-                </form>
+                <div class="flex items-center space-x-3">
+                    <span class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-gold"><i class="fa-solid fa-location-dot text-xs"></i></span>
+                    <span class="text-white">Ульяновск, Россия</span>
+                </div>
             </div>
         </div>
     </section>
@@ -519,12 +494,6 @@
                 document.getElementById('copy-status').innerText = "Скопировано!";
                 setTimeout(() => { document.getElementById('copy-status').innerText = ""; }, 2000);
             });
-        }
-
-        function handleSubmit(event) {
-            event.preventDefault();
-            document.getElementById('form-status').innerText = "Заявка отправлена!";
-            event.target.reset();
         }
     </script>
 </body>
