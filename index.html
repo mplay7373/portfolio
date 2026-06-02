@@ -92,7 +92,7 @@
             
             <nav class="hidden md:flex space-x-8 text-xs tracking-[0.2em] uppercase font-light text-gray-400">
                 <a href="#about" class="hover:text-gold transition duration-300">Автор</a>
-                <a href="#portfolio" class="hover:text-gold transition duration-300">Портфолио</a>
+                <a href="#portfolio" class="hover:text-gold transition duration-300">Portфолио</a>
                 <a href="#gear" class="hover:text-gold transition duration-300">Техника</a>
                 <a href="#promo" class="hover:text-gold transition duration-300">Спецпредложение</a>
                 <a href="#reviews" class="hover:text-gold transition duration-300">Отзывы</a>
@@ -170,7 +170,7 @@
                 </h2>
                 <div class="w-20 h-[1px] bg-gold"></div>
                 <p class="text-gray-300 text-sm md:text-base leading-relaxed font-light">
-                    Привет! Меня зовут Марат. Моя страсть — creation чистой, эстетичной картинки с характером. Я сторонник свежего, амбициозного взгляда на съемку. Не люблю заезженные шаблоны и искусственную, натянутую пластмассовую позировку. 
+                    Привет! Меня зовут Марат. Моя страсть — создание чистой, эстетичной картинки с характером. Я сторонник свежего, амбициозного взгляда на съемку. Не люблю заезженные шаблоны и искусственную, натянутую пластмассовую позировку. 
                 </p>
                 <p class="text-gray-400 text-sm leading-relaxed font-light">
                     Специализируюсь исключительно на художественных портретах и атмосферных видео-проходках. Моя задача — поймать тот самый кадр, в котором чувствуется глубина, стиль и неподдельные эмоции. Работа на топовый полный кадр Canon R8 позволяет мне выдавать стабильно дорогую, объемную кино-картинку в любых условиях.
@@ -220,10 +220,10 @@
                     <h2 class="font-serif text-4xl md:text-5xl text-white font-light">Портфолио</h2>
                 </div>
                 
+                <!-- Вкладки изменены: убрана кнопка Все -->
                 <div class="flex space-x-2 border-b border-white/5 pb-2 text-xs tracking-[0.2em] uppercase font-light">
-                    <button onclick="filterGallery('all')" class="filter-btn text-gold border-b-2 border-gold pb-2 px-4 transition">Все</button>
-                    <button onclick="filterGallery('photo')" class="filter-btn text-gray-400 hover:text-white pb-2 px-4 transition">Фото</button>
-                    <button onclick="filterGallery('video')" class="filter-btn text-gray-400 hover:text-white pb-2 px-4 transition">Video / Reels</button>
+                    <button id="btn-photo" onclick="filterGallery('photo')" class="filter-btn text-gold border-b-2 border-gold pb-2 px-4 transition">Фото</button>
+                    <button id="btn-video" onclick="filterGallery('video')" class="filter-btn text-gray-400 hover:text-white pb-2 px-4 transition">Video / Reels</button>
                 </div>
             </div>
 
@@ -462,10 +462,14 @@
     </div>
 
     <script>
+        // Инициализация галереи: показываем только фото по умолчанию
         window.addEventListener('load', () => {
             const loader = document.getElementById('preloader');
             loader.classList.add('opacity-0');
             setTimeout(() => { loader.style.display = 'none'; }, 700);
+            
+            // Запуск фильтра на фото при старте сайта
+            filterGallery('photo');
         });
 
         const menuBtn = document.getElementById('menu-btn');
@@ -481,9 +485,20 @@
         function filterGallery(category) {
             const items = document.querySelectorAll('.gallery-item');
             items.forEach(item => {
-                if (category === 'all') { item.style.display = 'block'; } 
-                else { item.style.display = item.classList.contains(category) ? 'block' : 'none'; }
+                item.style.display = item.classList.contains(category) ? 'block' : 'none';
             });
+            
+            // Переключение активного класса на кнопках
+            const btnPhoto = document.getElementById('btn-photo');
+            const btnVideo = document.getElementById('btn-video');
+            
+            if (category === 'photo') {
+                btnPhoto.className = "filter-btn text-gold border-b-2 border-gold pb-2 px-4 transition";
+                btnVideo.className = "filter-btn text-gray-400 hover:text-white pb-2 px-4 transition";
+            } else {
+                btnVideo.className = "filter-btn text-gold border-b-2 border-gold pb-2 px-4 transition";
+                btnPhoto.className = "filter-btn text-gray-400 hover:text-white pb-2 px-4 transition";
+            }
         }
 
         function openLightbox(src, title) {
