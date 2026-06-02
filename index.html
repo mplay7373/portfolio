@@ -8,7 +8,6 @@
     <!-- Твой личный значок MG (Золото на чёрном) -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23080808%22/><text y=%2262%22 x=%2250%22 font-family=%22'Cormorant Garamond', serif%22 font-size=%2242%22 font-weight=%22bold%22 fill=%22%23c5a880%22 text-anchor=%22middle%22>MG</text></svg>">
     
-    <!-- Оптимизированный Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +118,7 @@
         </div>
     </header>
 
-    <!-- Главный экран: Фотография Марата с фотоаппаратом (main_profile.png) -->
+    <!-- Главный экран: Фотография Марата с фотоаппаратом -->
     <section class="min-h-screen pt-28 pb-16 px-6 md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12" style="min-height: 100vh;">
         <div class="flex-1 space-y-6 md:pr-8">
             <div class="flex items-center space-x-3 text-gold tracking-[0.3em] text-xs uppercase font-semibold">
@@ -155,7 +154,7 @@
         </div>
     </section>
 
-    <!-- Раздел философии: Замена фотографии портрета на бокалы (bokaly.jpg) -->
+    <!-- Раздел философии: Замена фотографии на бокалы -->
     <section id="about" class="fade-in-section bg-dark-slate py-24 border-y border-white/5">
         <div class="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-12 gap-12 items-center">
             <div class="md:col-span-5 flex justify-center order-2 md:order-1">
@@ -174,13 +173,13 @@
                     Привет! Меня зовут Марат. Моя страсть — создание чистой, эстетичной картинки с характером. Я сторонник свежего, амбициозного взгляда на съемку. Не люблю заезженные шаблоны и искусственную, натянутую пластмассовую позировку. 
                 </p>
                 <p class="text-gray-400 text-sm leading-relaxed font-light">
-                    Специализируюсь исключительно на художественных портретах и атмосферных видео-проходках. Моя задача — поймать тот самый кадр, в котором чувствуется глубина, стиль и неподдельные эмоции. Работа на топовый полный кадр Canon R8 позволяет мне выдавать стабильно дорогую, объемную кино-картинку в любых условиях.
+                    Специализируюсь исключительно на художественных портретах и атмосферных видео-проходках. Моя задача — поймать тот самый кадр, в котором чувствуется глубина, style и неподдельные эмоции. Работа на топовый полный кадр Canon R8 позволяет мне выдавать стабильно дорогую, объемную кино-картинку в любых условиях.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Блок оборудования: Добавлена реальная фотография Canon EOS R8 (canon_r8.jpg) -->
+    <!-- Блок оборудования: Реальная фотография Canon EOS R8 -->
     <section id="gear" class="fade-in-section py-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center space-y-4 mb-16">
             <span class="text-gold tracking-[0.3em] text-xs uppercase block">Качество без компромиссов</span>
@@ -212,6 +211,7 @@
         </div>
     </section>
 
+    <!-- Портфолио: Твои реальные рабочие файлы изображений -->
     <section id="portfolio" class="fade-in-section py-24 bg-dark-slate border-t border-white/5">
         <div class="max-w-7xl mx-auto px-6 md:px-12">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-16">
@@ -228,24 +228,27 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="gallery-item photo group cursor-pointer" onclick="openLightbox('photo1.jpg', 'Кинематографичный портрет')">
+                <!-- Реальное Фото №1 -->
+                <div class="gallery-item photo group cursor-pointer" onclick="openLightbox('IMG_7396.jpg', 'Кинематографичный портрет')">
                     <div class="relative aspect-[3/4] overflow-hidden border border-white/5 bg-dark-pitch">
-                        <img src="photo1.jpg" alt="Портфолио 1" class="w-full h-full object-cover cinematic-filter transition duration-700 group-hover:scale-105" onerror="this.parentElement.parentElement.style.display='none'">
+                        <img src="IMG_7396.jpg" alt="Портфолио 1" class="w-full h-full object-cover cinematic-filter transition duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-dark-pitch/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                             <span class="border border-gold text-gold text-xs tracking-widest uppercase py-2 px-4 bg-dark-pitch/80">Посмотреть</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="gallery-item photo group cursor-pointer" onclick="openLightbox('photo2.jpg', 'Атмосферный кадр')">
+                <!-- Реальное Фото №2 -->
+                <div class="gallery-item photo group cursor-pointer" onclick="openLightbox('IMG_7417.jpg', 'Атмосферный кадр')">
                     <div class="relative aspect-[3/4] overflow-hidden border border-white/5 bg-dark-pitch">
-                        <img src="photo2.jpg" alt="Портфолио 2" class="w-full h-full object-cover cinematic-filter transition duration-700 group-hover:scale-105" onerror="this.parentElement.parentElement.style.display='none'">
+                        <img src="IMG_7417.jpg" alt="Портфолио 2" class="w-full h-full object-cover cinematic-filter transition duration-700 group-hover:scale-105">
                         <div class="absolute inset-0 bg-dark-pitch/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                             <span class="border border-gold text-gold text-xs tracking-widest uppercase py-2 px-4 bg-dark-pitch/80">Посмотреть</span>
                         </div>
                     </div>
                 </div>
 
+                <!-- Девушка крупным планом -->
                 <div class="gallery-item photo group cursor-pointer" onclick="openLightbox('IMG_7398.jpg', 'Кинематографичный макро-портрет')">
                     <div class="relative aspect-[3/4] overflow-hidden border border-white/5 bg-dark-pitch">
                         <img src="IMG_7398.jpg" alt="Макро-портрет" class="w-full h-full object-cover cinematic-filter transition duration-700 group-hover:scale-105">
@@ -273,14 +276,15 @@
                     </div>
                     <div class="mt-4 flex justify-between items-center text-xs tracking-widest uppercase">
                         <span class="text-white font-light">Кино-проходка 4K</span>
-                        <span class="text-gold">Видеоклип</span>
+                        <span class="text-gold">Video</span>
                     </div>
                 </div>
             </div>
             
+            <!-- Изменено: Ссылка перенаправлена на Instagram -->
             <div class="text-center mt-12">
-                <a href="https://t.me/mplay73" target="_blank" class="inline-block border border-gold/40 text-gold hover:bg-gold hover:text-dark-pitch text-xs tracking-widest uppercase font-semibold py-4 px-8 transition duration-300">
-                    Смотреть больше работ в Telegram <i class="fa-brands fa-telegram ml-2"></i>
+                <a href="https://instagram.com/marat.gainutdinov" target="_blank" class="inline-block border border-gold/40 text-gold hover:bg-gold hover:text-dark-pitch text-xs tracking-widest uppercase font-semibold py-4 px-8 transition duration-300">
+                    Смотреть больше работ в Instagram <i class="fa-brands fa-instagram ml-2"></i>
                 </a>
             </div>
         </div>
@@ -375,7 +379,7 @@
         </div>
     </section>
 
-    <!-- Очищенный блок контактов: Мгновенная прямая связь без форм и лишних мессенджеров -->
+    <!-- Контакты без лишних полей форм и мессенджера Max -->
     <section id="contacts" class="fade-in-section py-24 max-w-7xl mx-auto px-6 md:px-12">
         <div class="max-w-3xl mx-auto text-center space-y-8">
             <div class="space-y-4">
@@ -465,6 +469,7 @@
             document.getElementById('lightbox-caption').innerText = title;
             document.getElementById('lightbox').classList.replace('hidden', 'flex');
         }
+        function Flux_closeLightbox() { document.getElementById('lightbox').classList.replace('flex', 'hidden'); }
         function closeLightbox() { document.getElementById('lightbox').classList.replace('flex', 'hidden'); }
 
         let reviewsExpanded = false;
